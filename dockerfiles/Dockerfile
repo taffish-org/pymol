@@ -15,7 +15,7 @@ RUN git clone https://github.com/rcsb/mmtf-cpp.git && \
     cd /root/pymol-open-source/ && python3 setup.py build install --home=/root/pymol-open-source-build && \
     cp -r /root/pymol-open-source-build/lib/python/* /usr/local/lib/python3.11/dist-packages/ && \
     cp /root/pymol-open-source-build/bin/pymol /usr/local/bin/ && \
-    cd /roo/ && rm -r mmtf-cpp pymol-open-source pymol-open-source-build v3.1.0.tar.gz
+    cd /root/ && rm -r mmtf-cpp pymol-open-source pymol-open-source-build v3.1.0.tar.gz
 
 ENV TAFFISH_ENV=TAFFISH
 ENV TAFFISH_NAME=pymol
