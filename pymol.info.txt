@@ -1,0 +1,9 @@
+# <pymol:3.1.0 | KaiyuanHan | 2025-03-20>
+ARGS
+    <else>
+        pymol --help
+    <main>
+        pymol ::*APP-ARGS*::
+RUN
+    <container:taf-pymol-v3.1.0:ghcr.io/taffish-org/pymol:3.1.0>
+        ::*MAIN*::

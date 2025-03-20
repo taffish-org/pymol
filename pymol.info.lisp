@@ -1,0 +1,7 @@
+(:name           "pymol")
+(:repo           "taffish-org/pymol")
+(:author         "KaiyuanHan")
+(:version        "3.1.0")
+(:intro          "PyMOL is a source-available molecular visualization system created by Warren Lyford DeLano.")
+(:dependencies)
+(:functions      "pymol")
