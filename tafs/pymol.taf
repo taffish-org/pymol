@@ -11,15 +11,15 @@ ARGS
         pset          -p ::port:::5801
         image-name    ::in::            # [default pymol:]
         image-version ::iv::            # [default 3.1.0.gui]
-        passwd        ::pd::            # [default taffish2025pymol]
+        passwd        ::pd::            # [default 12345678]
     <opts-default>
-        pd  taffish2025pymol
+        pd  12345678
         c   container
         p   5801
         in  pymol:
         iv  3.1.0.gui
 RUN
     <::ctype:::taf-pymol-v::image-version:::ghcr.io/taffish-org/::image-name::::image-version::$::pset::>
-        x11vnc -storepasswd '::passwd::' /root/.vnc/passwd
+        echo '::passwd::' | vncpasswd -f > /root/.vnc/passwd
         /usr/local/bin/start-gui.sh
         ::*MAIN*::

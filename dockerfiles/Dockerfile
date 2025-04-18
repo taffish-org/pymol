@@ -24,7 +24,8 @@ RUN apt-get update && \
 
 # add gui by vnc & http by noVNC
 RUN apt-get update && apt-get install -y xfce4 tightvncserver xfce4-terminal xvfb x11vnc dbus-x11 && \
-    mkdir -p /root/.vnc && x11vnc -storepasswd 'taffish2025pymol' /root/.vnc/passwd && \
+    mkdir -p /root/.vnc && \
+    echo 'taffish2025' | vncpasswd -f > /root/.vnc/passwd && \
     echo '#!/bin/sh'                                    >  /root/.vnc/xstartup && \
     echo 'export DISPLAY=":1"'                          >> /root/.vnc/xstartup && \
     echo 'xrdb /root/.Xresources'                       >> /root/.vnc/xstartup && \
@@ -38,5 +39,3 @@ RUN apt-get update && apt-get install -y xfce4 tightvncserver xfce4-terminal xvf
 
 ENV TAFFISH_ENV=TAFFISH
 ENV TAFFISH_NAME=pymol
-
-CMD ["/usr/local/bin/start-gui.sh"]
