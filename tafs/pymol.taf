@@ -25,6 +25,10 @@ RUN
         echo "::passwd::" | vncpasswd -f > /root/.vnc/passwd
         chmod 600 /root/.vnc/passwd
         vncserver :1 -geometry 1280x720 -depth 24
-        /noVNC/utils/novnc_proxy --vnc localhost:5901 --listen ::port:: &
+        /noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 5801 &
         dbus-launch startxfce4 &
+        sleep 3
+        echo ''
+        echo '>>> pymol-GUI ===> http://localhost:'"::port::"'/vnc.html <<<'
+        echo ''
         ::*MAIN*::
