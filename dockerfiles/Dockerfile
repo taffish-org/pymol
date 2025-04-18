@@ -24,18 +24,18 @@ RUN apt-get update && \
 
 # add gui by vnc & http by noVNC
 RUN apt-get update && apt-get install -y xfce4 tightvncserver xfce4-terminal xvfb x11vnc dbus-x11 && \
-    mkdir -p /root/.vnc && \
-    echo 'taffish2025' | vncpasswd -f > /root/.vnc/passwd && \
-    echo '#!/bin/sh'                                    >  /root/.vnc/xstartup && \
-    echo 'export DISPLAY=":1"'                          >> /root/.vnc/xstartup && \
-    echo 'xrdb /root/.Xresources'                       >> /root/.vnc/xstartup && \
-    echo 'dbus-launch --exit-with-session startxfce4 &' >> /root/.vnc/xstartup && \
-    chmod +x /root/.vnc/xstartup && \
-    cd / && git clone https://github.com/novnc/noVNC.git && \
-    echo '#!/bin/sh'                                                     >  /usr/local/bin/start-gui.sh && \
-    echo 'tightvncserver :1 -geometry 1280x720 -depth 24'                >> /usr/local/bin/start-gui.sh && \
-    echo '/noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 5801 &' >> /usr/local/bin/start-gui.sh && \
-    chmod +x /usr/local/bin/start-gui.sh
+    cd / && git clone https://github.com/novnc/noVNC.git
+#    mkdir -p /root/.vnc && \
+#    echo 'taffish2025' | vncpasswd -f > /root/.vnc/passwd && \
+#    echo '#!/bin/sh'                                    >  /root/.vnc/xstartup && \
+#    echo 'export DISPLAY=":1"'                          >> /root/.vnc/xstartup && \
+#    echo 'xrdb /root/.Xresources'                       >> /root/.vnc/xstartup && \
+#    echo 'dbus-launch --exit-with-session startxfce4 &' >> /root/.vnc/xstartup && \
+#    chmod +x /root/.vnc/xstartup && \
+#    echo '#!/bin/sh'                                                     >  /usr/local/bin/start-gui.sh && \
+#    echo 'tightvncserver :1 -geometry 1280x720 -depth 24'                >> /usr/local/bin/start-gui.sh && \
+#    echo '/noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 5801 &' >> /usr/local/bin/start-gui.sh && \
+#    chmod +x /usr/local/bin/start-gui.sh
 
 ENV TAFFISH_ENV=TAFFISH
 ENV TAFFISH_NAME=pymol
