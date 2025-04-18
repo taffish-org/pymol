@@ -5,5 +5,6 @@ Usage:
 Opts:
     --p, --port   # set the port for http gui  [default 5801]      (only be set once when you first run taf-pymol)
     --c, --ctype  # container type             [default container] (only podman & docker can use gui)
+    --cmd         # run command in pymol env   [default :]
 Note:
     you can run 'taf-pymol --c podman' once, then goto [http://localhost:{port}/vnc.html] to use gui to use pymol

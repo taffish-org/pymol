@@ -5,6 +5,7 @@ ARGS
     <main>
         ::cmd::
     <opts>
+        cmd           :
         ctype         ::c::             # container type    [default container]
         port          ::p::             # port for http gui [default 5801]
         pset          -p ::port:::5801
@@ -17,4 +18,5 @@ ARGS
         iv  3.1.0.gui
 RUN
     <::ctype:::taf-pymol-v::image-version:::ghcr.io/taffish-org/::image-name::::image-version::$::pset::>
+        /usr/local/bin/start-gui.sh
         ::*MAIN*::
