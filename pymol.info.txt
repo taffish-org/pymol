@@ -1,4 +1,4 @@
-# <pymol:3.1.0.gui | KaiyuanHan | 2025-04-18>
+# <pymol:3.1.0.gui | KaiyuanHan | 2025-04-19>
 Usage:
     (cmd)$ taf-pymol pymol [OPTIONS]... [FILES]... [-- CUSTOM SCRIPT ARGUMENTS]
     (gui)> [http://localhost:{port}/vnc.html] with passwd: taffish2025pymol
