@@ -3,8 +3,9 @@ Usage:
     (cmd)$ taf-pymol pymol [OPTIONS]... [FILES]... [-- CUSTOM SCRIPT ARGUMENTS]
     (gui)> [http://localhost:{port}/vnc.html] with passwd: taffish2025pymol
 Opts:
-    --p, --port   # set the port for http gui  [default 5801]      (only be set once when you first run taf-pymol)
-    --c, --ctype  # container type             [default container] (only podman & docker can use gui)
-    --cmd         # run command in pymol env   [default :]
+    --p, --port     # set the port for http gui  [default 5801]      (only be set once when you first run taf-pymol)
+    --c, --ctype    # container type             [default container] (only podman & docker can use gui)
+    --pd, --passwd  # set password of VNC        [default taffish2025pymol]
+    --cmd           # run command in pymol env   [default :]
 Note:
-    you can run 'taf-pymol --c podman' once, then goto [http://localhost:{port}/vnc.html] to use gui to use pymol
+    you can run 'taf-pymol --c podman/docker' once, then goto [http://localhost:{port}/vnc.html] to use gui to use pymol
