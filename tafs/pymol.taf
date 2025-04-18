@@ -31,4 +31,5 @@ RUN
         echo ''
         echo '>>> pymol-GUI ===> http://localhost:'"::port::"'/vnc.html <<<'
         echo ''
+        cd /root/
         ::*MAIN*::
