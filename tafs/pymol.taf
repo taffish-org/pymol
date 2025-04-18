@@ -1,9 +1,20 @@
 +TOOL:pymol
 ARGS
     <else>
-        pymol --help
+        cat ::*APP-DIR*::../pymol.info.txt
     <main>
-        pymol ::*APP-ARGS*::
+        ::cmd::
+    <opts>
+        ctype         ::c::             # container type    [default container]
+        port          ::p::             # port for http gui [default 5801]
+        pset          -p ::port:::5801
+        image-name    ::in::            # [default pymol:]
+        image-version ::iv::            # [default 3.1.0.gui]
+    <opts-default>
+        c   container
+        p   5801
+        in  pymol:
+        iv  3.1.0.gui
 RUN
-    <container:taf-pymol-v3.1.0:ghcr.io/taffish-org/pymol:3.1.0>
+    <::ctype:::taf-pymol-v::image-version:::ghcr.io/taffish-org/::image-name::::image-version::$::pset::>
         ::*MAIN*::

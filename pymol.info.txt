@@ -1,9 +1,9 @@
-# <pymol:3.1.0 | KaiyuanHan | 2025-03-20>
-ARGS
-    <else>
-        pymol --help
-    <main>
-        pymol ::*APP-ARGS*::
-RUN
-    <container:taf-pymol-v3.1.0:ghcr.io/taffish-org/pymol:3.1.0>
-        ::*MAIN*::
+# <pymol:3.1.0.gui | KaiyuanHan | 2025-04-18>
+Usage:
+    (cmd)$ taf-pymol pymol [OPTIONS]... [FILES]... [-- CUSTOM SCRIPT ARGUMENTS]
+    (gui)> [http://localhost:{port}/vnc.html] with passwd: taffish2025pymol
+Opts:
+    --p, --port   # set the port for http gui  [default 5801]      (only be set once when you first run taf-pymol)
+    --c, --ctype  # container type             [default container] (only podman & docker can use gui)
+Note:
+    you can run 'taf-pymol --c podman' once, then goto [http://localhost:{port}/vnc.html] to use gui to use pymol
