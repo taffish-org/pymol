@@ -54,6 +54,7 @@ For the gui mode, we do it together with noVNC through VNC, which makes it possi
   <img width="1449" alt="image" src="https://github.com/user-attachments/assets/8bd8676e-3b78-4aab-bb6a-7963df6d1c76" />
 
   Note:
+  
     - By default, the /root/ path in the container needs to be retrieved from the global path /home/$USER
     - For the remote server, you can change the localhost in the URL to the server IP to access the pymol-gui on the remote server
     - If you want to start a new service, please open a new docker/podman container and select a new port
