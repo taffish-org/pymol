@@ -25,17 +25,19 @@ For the gui mode, we do it together with noVNC through VNC, which makes it possi
 
 2. Check the output and the URL
   Wait for the run to finish, check for errors, and if everything is fine, look at the end of the output, you can get a web address, for example:
-  ``>>> pymol-GUI ===> http://localhost:5801/vnc.html <<<``
+  ```
+  >>> pymol-GUI ===> http://localhost:5801/vnc.html <<<
+  ```
   Copy the URL and open it in your browser to access pymol-gui:
   <img width="1448" alt="image" src="https://github.com/user-attachments/assets/fac4efc9-377a-4ddc-af7e-8b9295a33067" />
 
-3. Enter the password and enter the GUI interface (the password is the --passwd set at runtime, the default is 12345678)
+4. Enter the password and enter the GUI interface (the password is the --passwd set at runtime, the default is 12345678)
   <img width="1449" alt="image" src="https://github.com/user-attachments/assets/f7babc62-b53f-43a1-b8fe-72a27329ab53" />
   
-4. Open the terminal in the GUI and enter pymol to open pymol in the GUI interface
+5. Open the terminal in the GUI and enter pymol to open pymol in the GUI interface
   <img width="1448" alt="image" src="https://github.com/user-attachments/assets/ff73fb1c-2646-485c-99c6-33d4475bf76d" />
 
-5. Use pymol-gui
+6. Use pymol-gui
   <img width="1448" alt="image" src="https://github.com/user-attachments/assets/b57426c8-33b7-4492-ab69-049f4d204af7" />
   <img width="1449" alt="image" src="https://github.com/user-attachments/assets/8bd8676e-3b78-4aab-bb6a-7963df6d1c76" />
    > Note: By default, the /root/ path in the container needs to be retrieved from the global path /home/$USER
