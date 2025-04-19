@@ -9,7 +9,7 @@ PyMOL is a source-available molecular visualization system created by Warren Lyf
 
 ## pymol:v3.1.0.gui -- Use gui of pymol in your browser
 
-For the gui mode, we do it together with noVNC through VNC, which makes it possible to access the gui version of pymol through a browser, as shown in the following tutorials:
+For the gui mode, we do it together with [noVNC](https://github.com/novnc/noVNC) through VNC, which makes it possible to access the gui version of pymol through a browser, as shown in the following tutorials:
 
 ### 1. Run the following command on the CLI:
   
