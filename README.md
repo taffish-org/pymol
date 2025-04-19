@@ -5,13 +5,13 @@
 
 PyMOL is a source-available molecular visualization system created by Warren Lyford DeLano.
 
-> 我们为 pymol 提供了普通命令行模式与 gui 模式，对于有 gui 需求的用户请获取 pymol:v3.1.0.gui，只有命令行需求的用户可以仅获取 pymol:v3.1.0
+> We provide normal command line mode and GUI mode for pymol, for users who need GUI please get pymol:v3.1.0.gui, and for users who only need command line, you can only get pymol:v3.1.0
 
 ## pymol:v3.1.0.gui -- Use gui of pymol in your browser
 
-对于 gui 模式，我们通过 VNC 与 noVNC 一起完成，实现了通过浏览器访问 gui 版本 pymol 的可能，具体教程如下：
+For the gui mode, we do it together with noVNC through VNC, which makes it possible to access the gui version of pymol through a browser, as shown in the following tutorials:
 
-1. 在命令行运行如下命令
+1. Run the following command on the CLI:
   ```
   taf update
   taf install -y pymol:v3.1.0.gui
@@ -22,10 +22,22 @@ PyMOL is a source-available molecular visualization system created by Warren Lyf
   # --port will be used when you try to connect the gui          [default 5801]
   #        it will only be set once when you first run taf-pymol
   ```
-2. 检查输出与网址
-  等待运行完成，是否有错误，在程序最后您可以获得一个网址，例如：
+
+2. Check the output and the URL
+  Wait for the run to finish, check for errors, and if everything is fine, look at the end of the output, you can get a web address, for example:
   ``>>> pymol-GUI ===> http://localhost:5801/vnc.html <<<``
-  复制网址并在浏览器中打开即可访问 pymol-gui
+  Copy the URL and open it in your browser to access pymol-gui:
   <img width="1448" alt="image" src="https://github.com/user-attachments/assets/fac4efc9-377a-4ddc-af7e-8b9295a33067" />
 
-4. 输入密码：输入在运行时设定的 passwd 密码
+3. Enter the password and enter the GUI interface (the password is the --passwd set at runtime, the default is 12345678)
+  <img width="1449" alt="image" src="https://github.com/user-attachments/assets/f7babc62-b53f-43a1-b8fe-72a27329ab53" />
+  
+4. Open the terminal in the GUI and enter pymol to open pymol in the GUI interface
+  <img width="1448" alt="image" src="https://github.com/user-attachments/assets/ff73fb1c-2646-485c-99c6-33d4475bf76d" />
+
+5. Use pymol-gui
+  <img width="1448" alt="image" src="https://github.com/user-attachments/assets/b57426c8-33b7-4492-ab69-049f4d204af7" />
+  <img width="1449" alt="image" src="https://github.com/user-attachments/assets/8bd8676e-3b78-4aab-bb6a-7963df6d1c76" />
+   > Note: By default, the /root/ path in the container needs to be retrieved from the global path /home/$USER
+   >       For the remote server, you can change the localhost in the URL to the server IP to access the pymol-gui on the remote server
+   >       If you want to start a new service, please open a new docker/podman container and select a new port
