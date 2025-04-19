@@ -56,4 +56,4 @@ For the gui mode, we do it together with noVNC through VNC, which makes it possi
   Note:
   - By default, the /root/ path in the container needs to be retrieved from the global path /home/$USER
   - For the remote server, you can change the localhost in the URL to the server IP to access the pymol-gui on the remote server
-  - If you want to start a new service, please open a new docker/podman container and select a new port
+  - Only a single screen is created for the same port/container service, and different accesses share the same screen. If you want to start a new service, please open a new docker/podman container(use another user to run taf-pymol-v3.1.0.gui) and select a new port
