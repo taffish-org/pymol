@@ -25,7 +25,7 @@ RUN apt-get update && \
 # add gui by vnc & http by noVNC
 RUN apt-get update && apt-get install -y xfce4 tightvncserver xfce4-terminal xvfb x11vnc dbus-x11 && \
     cd / && git clone https://github.com/novnc/noVNC.git && \
-    echo 'echo "cd /"' >> /root/.bashrc && \
+    echo 'cd /' >> /root/.bashrc && \
     echo 'echo ""' >> /root/.bashrc && \
     echo 'echo "Welcome to taffish-pymol-GUI!"' >> /root/.bashrc && \
     echo 'echo ""' >> /root/.bashrc && \
