@@ -1,11 +1,6 @@
 +TOOL:pymol
 ARGS
-    <else>
-        ::cmd::
-    <main>
-        ::cmd::
     <opts>
-        cmd           :
         ctype         ::c::             # container type    [default container]
         port          ::p::             # port for http gui [default 5801]
         pset          -p ::port:::5801
@@ -14,7 +9,7 @@ ARGS
         passwd        ::pd::            # [default 12345678]
     <opts-default>
         pd  12345678
-        c   container
+        c   $$if ( podman ps > /dev/null 2>&1 ); then echo 'podman'; else echo 'docker'; fi$$
         p   5801
         in  pymol:
         iv  3.1.0.gui
@@ -32,4 +27,3 @@ RUN
         echo '>>> pymol-GUI ===> http://localhost:'"::port::"'/vnc.html <<<'
         echo ''
         cd /root/
-        ::*MAIN*::
