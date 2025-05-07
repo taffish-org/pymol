@@ -9,7 +9,7 @@ ARGS
         passwd        ::pd::            # [default 12345678]
     <opts-default>
         pd  12345678
-        c   container
+        c   podman/docker
         p   5801
         in  pymol:
         iv  3.1.0.gui
